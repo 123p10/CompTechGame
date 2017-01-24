@@ -2,6 +2,8 @@
 *Please comment your code and clearly state the changes you made in github*
 
 DesktopLauncher
+MyInput
+InputProcessor
 GameStateManager
 	*Notes*
 		-have a function which renders and updates the gamestate selected
