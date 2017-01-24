@@ -1,0 +1,47 @@
+*Minimum amount of static variables since we don't want to have to reset all the static variables or have them affect all instantiations of a class*
+*Please comment your code and clearly state the changes you made in github*
+
+DesktopLauncher
+GameStateManager
+	*Notes*
+		-have a function which renders and updates the gamestate selected
+		-Also create a way to destroy a gamestate and generate a new one from a class
+		
+Game
+	*Notes*(Not A Class)
+		-Load assets here using a static reference to Content
+		-render and update gsm here
+Content
+	Methods
+		-getTexture(string key)
+		-getSound(string key)
+		-getMusic(string key)
+		-loadTexture(string path,string key)
+		-loadSound(string path,string key)
+		-loadMusic(string path,string key)
+		
+GameState
+		-Level
+			-Every Level		
+		-Menu
+		-Level Select
+		-Lose
+		-Win
+		-Cutscene
+			-(All the Cutscenes)
+Entity
+	-Enemy
+		-(All the Enemies)
+	-Player
+	-NPC
+		-(All the NPCs)
+Weapons
+	-Projectile
+		-(All Projectiles)
+	-Melee
+		-(All Melee Weapons)
+Interactable Objects
+	-Door
+		-(Different types of doors)
+	-Button
+		-(Different types of buttons)
