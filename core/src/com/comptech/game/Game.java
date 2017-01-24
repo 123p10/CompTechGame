@@ -20,14 +20,20 @@ public class Game implements ApplicationListener {
 		batch = new SpriteBatch();
 		
 		//Old way
-		img = new Texture("badlogic.jpg");
+	//	img = new Texture("badlogic.jpg");
 		//New way
 		res.loadTexture("badlogic.jpg", "testImg");
-		img = res.getTexture("testIMG");
+		img = res.getTexture("testImg");
 	}
 
 	@Override
 	public void render () {
+		Gdx.gl.glClearColor(1, 0, 0, 1);
+		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+
+		batch.begin();
+		batch.draw(img, 0, 0,1920,1080);
+		batch.end();
 	}
 	
 	
@@ -37,32 +43,18 @@ public class Game implements ApplicationListener {
 		img.dispose();
 	}
 
+	
+	//Never really used these
 	@Override
 	public void resize(int width, int height) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public void pause() {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public void resume() {
-		// TODO Auto-generated method stub
-		
 	}
-	//Example
-	/*	public void render () {
-		Gdx.gl.glClearColor(1, 0, 0, 1);
-		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-		//You always have to have batch.begin() and batch.end() ??? you just do
-		batch.begin();
-		//Draw Image get rid of later but used for reference
-		batch.draw(img, 0, 0);
-		batch.end();
-	}
-*/
+
 }
