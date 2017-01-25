@@ -9,10 +9,16 @@ public class DesktopLauncher {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
 		
 		config.title = "Hotline Bling";
-		config.width = 1920;
-		config.height = 1080;
-		config.resizable = false;
-		config.fullscreen = true;
+		config.width = Game.WIDTH;
+		config.height = Game.HEIGHT;
+		config.resizable = true;
+		if(Game.isFullScreen){
+			config.fullscreen = true;
+		}
+		else{
+			config.fullscreen = false;
+		}
+		
 		new LwjglApplication(new Game(), config);
 
 	}
